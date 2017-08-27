@@ -1,5 +1,4 @@
 " .vimrc built for vim 7.4
-
 set nocompatible
 filetype off
 
@@ -21,14 +20,16 @@ Plugin 'vim-airline/vim-airline-themes'
 Bundle 'edkolev/tmuxline.vim'
 
 call vundle#end()
-filetype plugin indent on
+
+filetype on
+filetype plugin on
+filetype indent on
 
 " General Settings
 syntax on
 
 set t_Co=256
 set number " show line numbers
-set autoindent
 set showmatch
 
 set splitbelow
@@ -64,6 +65,8 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
     \ set shiftwidth=2
+    \ set expandtab
+    \ set autoindent
 
 " NerdTree mapping for quick access
 map <C-n> :NERDTreeToggle<CR>
